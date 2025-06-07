@@ -65,9 +65,9 @@ section {
                     content: '';
                     position: absolute;
                     background-color: #000;
-                    width: 100%;
-                    height: 100px;
-                    top: 150%;
+                    width: 70%;
+                    height: 90px;
+                    top: 100%;
                     left: 50px;
                     border: 50%;
                     filter: blur(50px);
@@ -265,4 +265,104 @@ section {
             }
         }
     }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    grid-template-columns: 1fr 1fr; /* Ajusta para duas colunas iguais */
+    gap: 20px; /* Reduz o espaçamento */
+    width: 90vw; /* Ajusta a largura do header */
+  }
+
+  header img {
+    width: 150px; /* Reduz o tamanho da logo */
+    margin: 4px;
+  }
+
+  header nav ul {
+    grid-template-columns: repeat(3, 1fr); /* Ajusta para colunas iguais */
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+
+  section {
+    height: auto; /* Ajusta a altura para conteúdo flexível */
+    padding: 20px;
+  }
+
+  .list {
+    width: 100%;
+    height: auto;
+  }
+
+  .item {
+    position: relative;
+    transform: translateX(0);
+    opacity: 1;
+    margin-bottom: 40px;
+  }
+
+  .car-img {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .car-img img {
+    width: 100%;
+    transform: rotate(0);
+  }
+
+  .content {
+    position: relative;
+    width: 100%;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 10px;
+  }
+
+  .content .car-information {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+  .content h2 {
+    font-size: 1.5em;
+  }
+
+  .description {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .information {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+
+  .arrows {
+    width: 100%;
+    top: auto;
+    bottom: 10px;
+    transform: translateY(0);
+    justify-content: space-around;
+  }
+
+  .indicators {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .indicators .number {
+    font-size: 3em;
+  }
+
+  .indicators ul {
+    justify-content: center;
+  }
 }
